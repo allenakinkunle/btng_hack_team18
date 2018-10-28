@@ -33,14 +33,18 @@ ul {
   line-height: 1;
   position: relative;
   top: -1.2rem;
-  color: $nigeria-green;
-  
+  color: transparent;
+  background-image: url(../logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
   span {
     font-weight: normal;
     font-size: .5em;
     position: relative;
     top: -.6rem;
     left: 3rem;
+    color: $nigeria-green;
   }
 }
 
