@@ -1,6 +1,6 @@
 {
-  "pollingUnits": [
-    {
+  "pollingUnits": {
+    "24-16-14-020": {
       "id": 241614020,
       "code": "24-16-14-020",
       "lngLat": { "lng": 3.356800, "lat": 6.548650 },
@@ -12,22 +12,22 @@
       "reports": [
         {
           "status": "violence",
-          "date": 1540656623247,
-          "message": "This is my message"
+          "date": 6606698002889,
+          "message": "One guy voted twice"
         },
         {
           "status": "safe",
-          "date": 1540656623247,
-          "message": "Another message"
+          "date": 9938857385941,
+          "message": "Card reader not working :|"
         },
         {
           "status": "safe",
-          "date": 1540656623247,
-          "message": "The third message"
+          "date": 5042516633506,
+          "message": "Safe at polls, come and vote!"
         }
       ]
     },
-    {
+    "16-08-12-021": {
       "id": 160812021,
       "code": "16-08-12-021",
       "lngLat": { "lng": 7.67706, "lat": 5.59241 },
@@ -39,12 +39,12 @@
       "reports": [
         {
           "status": "violence",
-          "date": 1540656623247,
+          "date": 9938857385941,
           "message": "Process went great!"
         }
       ]
     },
-    {
+    "19-01-03-013": {
       "id": 190103013,
       "code": "19-01-03-013",
       "lngLat": { "lng": 8.967950, "lat": 11.991020 },
@@ -56,12 +56,12 @@
       "reports": [
         {
           "status": "violence",
-          "date": 1540656623247,
-          "message": "This is my message"
+          "date": 3760620780704,
+          "message": "One guy voted twice"
         }
       ]
     },
-    {
+    "22-12-06-005": {
       "id": 221206005,
       "code": "22-12-06-005",
       "lngLat": { "lng": 6.762100, "lat": 8.014110 },
@@ -73,12 +73,12 @@
       "reports": [
         {
           "status": "violence",
-          "date": 1540656623247,
+          "date": 5473835782310,
           "message": "Don't listen to the media, it's safe to come and vote!"
         }
       ]
     },
-    {
+    "29-07-04-001": {
       "id": 290704001,
       "code": "29-07-04-001",
       "lngLat": { "lng": 4.503294, "lat": 7.744077 },
@@ -90,13 +90,13 @@
       "reports": [
         {
           "status": "violence",
-          "date": 1540656623247,
+          "date": 9938857385941,
           "message": "Some robbers came to beat up the INEC officials"
         }
 
       ]
     },
-    {
+    "33-23-08-005": {
       "id": 332308005,
       "code": "33-23-08-005",
       "lngLat": { "lng": 5.012230, "lat":12.721900  },
@@ -114,7 +114,7 @@
 
       ]
     },
-    {
+    "34-05-08-001": {
       "id": 340508001,
       "code": "34-05-08-001",
       "lngLat": { "lng": 10.38067, "lat": 8.52615 },
@@ -126,12 +126,12 @@
       "reports": [
         {
           "status": "other",
-          "date": 1540656623247,
+          "date": 4734129624925,
           "message": "I don dey see awon pikin dey vote o"
         }
       ]
     },
-    {
+    "08-06-05-012": {
       "id": 80605012,
       "code": "08-06-05-012",
       "lngLat": { "lng": 12.84791, "lat": 10.86921 },
@@ -143,13 +143,13 @@
       "reports": [
         {
           "status": "couldn't vote",
-          "date": 1540656623247,
+          "date": 5473835782310,
           "message": "Someone ran away with the ballot box!"
         }
 
       ]
     },
-    {
+    "13-04-01-003": {
       "id": 130401003,
       "code": "13-04-01-003",
       "lngLat": { "lng": 5.42014, "lat": 8.13828 },
@@ -161,13 +161,13 @@
       "reports": [
         {
           "status": "other",
-          "date": 1540656623247,
+          "date": 4558480830991,
           "message": "One guy voted twice"
         }
 
       ]
     },
-    {
+    "12-12-08-026": {
       "id": 121208026,
       "code": "12-12-08-026",
       "lngLat": { "lng": 5.61806, "lat": 6.34228 },
@@ -179,15 +179,10 @@
       "reports": [
         {
           "status": "couldn't vote",
-          "date": 1540656623247,
+          "date": 6606698002889,
           "message": "Card reader isn't working"
-        },
-        {
-          "status": "couldn't vote",
-          "date": 1540656623247,
-          "message": "TEST TEST TEST"
         }
       ]
     }
-  ]
+  }
 }

@@ -12,25 +12,27 @@ var ref = firebase.database().ref('/pollingUnits');
 let examplePollingUnits;
 
 ref.on('value', (snap) => {
-  console.log(snap.val());
+  // console.log(snap.val());
 
   examplePollingUnits = snap.val();
 
-  examplePollingUnits.forEach((pU) => {
-    addUnit(pU);
+    for (const key of Object.keys(examplePollingUnits)) {
+      let pU = examplePollingUnits[key];
 
-    pU.reports.forEach((r) => {
-      let li = document.createElement('li');
-          li.innerHTML = `<h3 class="unit-name">${pU.pollingUnitName}</h3></br>
-            <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
-            <span class="status">${r.status}</span><span class="seperator">|</span>
-            <span class="date">${dateToTime(r.date)}</span><span class="seperator">|</span>
-            <span class="message">${r.message}</span>
-            <button>Flag as suspicious</button>`
+      addUnit(pU);
 
-      document.querySelector('.reports-list').appendChild(li);
-    });
-  });
+      pU.reports.forEach((r) => {
+        let li = document.createElement('li');
+            li.innerHTML = `<h3 class="unit-name">${pU.pollingUnitName}</h3></br>
+              <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
+              <span class="status">${r.status}</span><span class="seperator">|</span>
+              <span class="date">${dateToTime(r.date)}</span><span class="seperator">|</span>
+              <span class="message">${r.message}</span>
+              <button>Flag as suspicious</button>`
+
+        document.querySelector('.reports-list').appendChild(li);
+      });
+    }
 
   document.querySelectorAll('.reports-list .unit-name').forEach((n) => {
     n.addEventListener('click', (e) => {
@@ -108,8 +110,6 @@ let getStatusColor = (status) => {
   }
 }
 
-
-
 let addUnit = (unit) => {
   let popup = new mapboxgl.Popup({})
     .setHTML(getPopupHtml(unit));
@@ -134,7 +134,9 @@ document.addEventListener("DOMContentLoaded", () => {
     style: 'mapbox://styles/m6-d6/cjnrgnad61hph2rp9in8huamo'
   });
 
-  // map.on('load', () => {
-    
-  // });
+  document.querySelectorAll('.unit-name').forEach((name) => {
+    name.addEventListener('click', (n) => {
+      console.log(n.textContent);
+    });
+  });
 });
