@@ -933,7 +933,7 @@ ul {
 /* line 29, src/sass/styles.scss */
 .title {
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
   line-height: 1;
   position: relative;
@@ -945,7 +945,7 @@ ul {
   /* line 41, src/sass/styles.scss */
   .title span {
     font-weight: normal;
-    font-size: .5em;
+    font-size: .25em;
     position: relative;
     top: -.6rem;
     left: 3rem;
