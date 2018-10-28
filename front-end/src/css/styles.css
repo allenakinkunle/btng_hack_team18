@@ -931,64 +931,88 @@ ul {
   display: none; }
 
 /* line 29, src/sass/styles.scss */
+.title {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  top: -1.2rem;
+  color: transparent;
+  background-image: url(../logo.png);
+  background-repeat: no-repeat;
+  background-size: contain; }
+  /* line 41, src/sass/styles.scss */
+  .title span {
+    font-weight: normal;
+    font-size: .25em;
+    position: relative;
+    top: -.6rem;
+    left: 3rem;
+    color: #008753; }
+
+/* line 51, src/sass/styles.scss */
 #map {
   width: 56vw;
-  height: 93vh;
+  height: calc(93vh - 3.5rem);
   overflow: visible; }
-  /* line 34, src/sass/styles.scss */
+  /* line 56, src/sass/styles.scss */
   #map canvas {
     border-radius: 4px;
     border: 1px solid #ccd;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     outline: none;
     transition: border-color .25s ease-in-out; }
-    /* line 41, src/sass/styles.scss */
+    /* line 63, src/sass/styles.scss */
     #map canvas:active {
       border: 1px solid #008753; }
 
-/* line 47, src/sass/styles.scss */
+/* line 69, src/sass/styles.scss */
 .mapboxgl-popup-content {
   padding-left: 1rem;
   padding-right: 1rem; }
-  /* line 51, src/sass/styles.scss */
+  /* line 73, src/sass/styles.scss */
   .mapboxgl-popup-content div {
     margin-top: .6rem; }
-  /* line 55, src/sass/styles.scss */
+  /* line 77, src/sass/styles.scss */
   .mapboxgl-popup-content h2 {
     text-transform: capitalize;
     margin-bottom: 1.8rem; }
-  /* line 60, src/sass/styles.scss */
+  /* line 82, src/sass/styles.scss */
   .mapboxgl-popup-content h4 {
     display: inline-block;
     margin: 0; }
 
-/* line 66, src/sass/styles.scss */
+/* line 88, src/sass/styles.scss */
 .mapboxgl-popup-content .reports {
   margin-top: 1.2rem; }
-  /* line 69, src/sass/styles.scss */
+  /* line 91, src/sass/styles.scss */
   .mapboxgl-popup-content .reports li {
     margin-top: .25rem; }
 
-/* line 74, src/sass/styles.scss */
+/* line 96, src/sass/styles.scss */
 .indicator {
   display: inline-block;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%; }
 
-/* line 83, src/sass/styles.scss */
+/* line 105, src/sass/styles.scss */
 .all-reports {
+  font-size: .8rem;
   padding-left: 2vw;
-  width: 40vw; }
-  /* line 87, src/sass/styles.scss */
+  width: 40vw;
+  height: 94vh;
+  overflow-y: scroll; }
+  /* line 112, src/sass/styles.scss */
   .all-reports h2 {
-    margin-top: 0; }
-  /* line 91, src/sass/styles.scss */
+    margin-top: 0;
+    color: #008753; }
+  /* line 117, src/sass/styles.scss */
   .all-reports li {
     border-top: 1px dashed #bbb;
     padding-top: .7rem;
     padding-bottom: .7rem; }
-  /* line 97, src/sass/styles.scss */
+  /* line 123, src/sass/styles.scss */
   .all-reports h3 {
     display: inline-block;
     margin-top: 0;
@@ -997,8 +1021,40 @@ ul {
     cursor: pointer;
     border-bottom: 2px solid #008753; }
 
-/* line 107, src/sass/styles.scss */
+/* line 133, src/sass/styles.scss */
+.reports-list {
+  display: flex;
+  flex-direction: column-reverse; }
+
+/* line 138, src/sass/styles.scss */
+button {
+  background: white;
+  appearance: none;
+  float: right;
+  outline: 0;
+  color: #008753;
+  border: 1px solid #008753;
+  border-radius: 4px;
+  transition: background-color .25s;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px; }
+  /* line 151, src/sass/styles.scss */
+  button:hover {
+    background-color: #d9ede5; }
+
+/* line 156, src/sass/styles.scss */
+.pdf {
+  font-size: 2rem;
+  float: none;
+  margin-top: 1rem; }
+
+/* line 162, src/sass/styles.scss */
 .seperator {
   margin-left: .6rem;
   margin-right: .6rem;
   color: #aaa; }
+
+/* line 168, src/sass/styles.scss */
+.message {
+  font-weight: bold; }

@@ -26,15 +26,37 @@ ul {
   display: none;
 }
 
+.title {
+  font-weight: 900;
+  font-size: 3rem;
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  top: -1.2rem;
+  color: transparent;
+  background-image: url(../logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  span {
+    font-weight: normal;
+    font-size: .25em;
+    position: relative;
+    top: -.6rem;
+    left: 3rem;
+    color: $nigeria-green;
+  }
+}
+
 #map {
   width: 56vw;
-  height: 93vh;
+  height: calc(93vh - 3.5rem);
   overflow: visible;
 
   canvas {
     border-radius: 4px;
     border: 1px solid #ccd;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
+    // box-shadow: 0 6px 18px rgba(0, 0, 0, .15);
     outline: none;
     transition: border-color .25s ease-in-out;
 
@@ -81,11 +103,15 @@ ul {
 }
 
 .all-reports {
+  font-size: .8rem;
   padding-left: 2vw;
   width: 40vw;
+  height: 94vh;
+  overflow-y: scroll;
 
   h2 {
     margin-top: 0;
+    color: $nigeria-green;
   }
 
   li {
@@ -104,8 +130,41 @@ ul {
   }
 }
 
+.reports-list {
+  display: flex;
+  flex-direction: column-reverse; 
+}
+
+button {
+  background: white;
+  appearance: none;
+  float: right;
+  outline: 0;
+  color: $nigeria-green;
+  border: 1px solid $nigeria-green;
+  border-radius: 4px;
+  transition: background-color .25s;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  &:hover {
+    background-color: mix($nigeria-green, white, 15%);
+  }
+}
+
+.pdf {
+  font-size: 2rem;
+  float: none;
+  margin-top: 1rem;
+}
+
 .seperator {
   margin-left: .6rem;
   margin-right: .6rem;
   color: #aaa;
+}
+
+.message {
+  font-weight: bold;
 }

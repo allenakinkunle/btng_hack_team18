@@ -1,92 +1,59 @@
-let map;
+// FIREBASE
+var config = {
+  apiKey: "AIzaSyBxdYbK8gkcL3u8cYLd2e3ZHlyM3BHCXYY",
+  authDomain: "btng-team18.firebaseapp.com",
+  databaseURL: "https://btng-team18.firebaseio.com",
+  projectId: "btng-team18".databaseURL
+};
+firebase.initializeApp(config);
 
-let examplePollingUnits = [
-  {
-    lngLat: { lng: 3.356800, lat: 6.548650 },
-    status: "violence",
-    pollingUnitName: '4, adeyinka st.',
-    ward: 'Ilupeju Industrial Estate',
-    LGA: 'Mushin',
-    state: 'Lagos',
-    reports: [
-      {
-        status: 'violence',
-        date: 1540656623247,
-        message: 'This is my message'
-      },
-      {
-        status: 'safe',
-        date: 1540656623247,
-        message: 'Another message'
-      },
-      {
-        status: 'safe',
-        date: 1540656623247,
-        message: 'The third message'
+var ref = firebase.database().ref('/pollingUnits');
+
+let examplePollingUnits;
+
+ref.on('value', (snap) => {
+  let latestDate;
+
+  examplePollingUnits = snap.val();
+
+    document.querySelector('.reports-list').innerHTML = '';
+
+    for (const key of Object.keys(examplePollingUnits)) {
+      let pU = examplePollingUnits[key];
+
+      addUnit(pU);
+
+      for (const key of Object.keys(pU.reports)) {
+
+        let r = pU.reports[key];
+
+        let li = document.createElement('li');
+            li.innerHTML = `<h3 class="unit-name">${pU.pollingUnitName}</h3></br>
+              <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
+              <span class="status">${r.status}</span><span class="seperator">|</span>
+              <span class="date">${dateToTime(r.date)}</span><span class="seperator">|</span>
+              <span class="message">${r.message}</span>
+              <button>Flag as suspicious</button>`
+
+        document.querySelector('.reports-list').prepend(li);
       }
-    ]
-  },
-  {
-    lngLat: { lng: 8.967950, lat: 11.991020 },
-    status: "safe",
-    pollingUnitName: 'Amaeke Umuehihie Village Square',
-    ward: 'Uzoagba',
-    LGA: 'Ikeduru',
-    state: 'Imo',
-    reports: [
-      {
-        status: 'violence',
-        date: 1540656623247,
-        message: 'This is my message'
-      }
-    ]
-  },
-  {
-    lngLat: { lng: 6.908873275938959, lat: 10.05200237837603 },
-    status: "rigging",
-    pollingUnitName: 'yankintaj / banago, yankintaps',
-    ward: 'Chula',
-    LGA: 'Ajingi',
-    state: 'Kano',
-    reports: [
-      {
-        status: 'violence',
-        date: 1540656623247,
-        message: 'This is my message'
-      }
-    ]
-  },
-  {
-    lngLat: { lng: 6.762100, lat: 8.014110 },
-    status: "safe",
-    pollingUnitName: 'ebwa area open space, ebwa',
-    ward: 'Kupa North East',
-    LGA: 'Lokoja',
-    state: 'Kogi',
-    reports: [
-      {
-        status: 'violence',
-        date: 1540656623247,
-        message: 'This is my message'
-      }
-    ]
-  },
-  {
-    lngLat: { lng: 7.677060, lat: 5.592410 },
-    status: "violence",
-    pollingUnitName: '59 alakas compound',
-    ward: 'Olusokun',
-    LGA: 'Ede North',
-    state: 'Osun',
-    reports: [
-      {
-        status: 'violence',
-        date: 1540656623247,
-        message: 'This is my message'
-      }
-    ]
-  }
-];
+    }
+
+  document.querySelectorAll('.reports-list .unit-name').forEach((n) => {
+    n.addEventListener('click', (e) => {
+      examplePollingUnits.forEach((p) => {
+        console.log(p.pollingUnitName, n.textContent);
+
+        if (p.pollingUnitName === n.textContent) {
+          
+        }
+      });
+    });
+  });
+});
+
+// MAPS
+let map;
 
 let dateToTime = (date) => {
   var d = new Date(date).toUTCString();
@@ -115,13 +82,23 @@ let getPopupHtml = (unit) => {
     <h4>Reports:</h4>
     <ul>`
 
-  unit.reports.forEach((r) => {
-    html += `<li>
+  for (const key of Object.keys(unit.reports)) {
+      let r = unit.reports[key];
+
+      html += `<li>
       <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
       <span class="time">${dateToTime(r.date)}</span>
       <span class="message">"${r.message}"</span>
     </li>`;
-  });
+  }
+
+  // unit.reports.forEach((r) => {
+  //   html += `<li>
+  //     <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
+  //     <span class="time">${dateToTime(r.date)}</span>
+  //     <span class="message">"${r.message}"</span>
+  //   </li>`;
+  // });
 
   html += `</ul></div>`;
 
@@ -143,7 +120,7 @@ let getStatusColor = (status) => {
     return '#e03';
   } else if (status === "safe") {
     return '#0d3'
-  } else if (status === "rigging") {
+  } else if (status === "rigging" || status === "other" || "couldn't vote") {
     return '#f90'
   }
 }
@@ -172,26 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
     style: 'mapbox://styles/m6-d6/cjnrgnad61hph2rp9in8huamo'
   });
 
-  map.on('load', () => {
-    examplePollingUnits.forEach((pU) => {
-      addUnit(pU);
-
-      pU.reports.forEach((r) => {
-        let li = document.createElement('li');
-            li.innerHTML = `<h3 class="unit-name">${pU.pollingUnitName}</h3></br>
-              <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
-              <span class="status">${r.status}</span><span class="seperator">|</span>
-              <span class="date">${dateToTime(r.date)}</span><span class="seperator">|</span>
-              <span class="message">${r.message}</span>`
-
-        document.querySelector('.reports-list').appendChild(li);
-      });
-    });
-
-    document.querySelectorAll('.reports-list .unit-name').forEach((n) => {
-      n.addEventListener('click', (e) => {
-        // n.textContent
-      });
+  document.querySelectorAll('.unit-name').forEach((name) => {
+    name.addEventListener('click', (n) => {
+      console.log(n.textContent);
     });
   });
 });
