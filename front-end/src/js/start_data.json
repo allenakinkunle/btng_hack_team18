@@ -1,0 +1,193 @@
+{
+  "pollingUnits": [
+    {
+      "id": 241614020,
+      "code": "24-16-14-020",
+      "lngLat": { "lng": 3.356800, "lat": 6.548650 },
+      "status": "violence",
+      "pollingUnitName": "4, adeyinka st.",
+      "ward": "Ilupeju Industrial Estate",
+      "LGA": "Mushin",
+      "state": "Lagos",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "This is my message"
+        },
+        {
+          "status": "safe",
+          "date": 1540656623247,
+          "message": "Another message"
+        },
+        {
+          "status": "safe",
+          "date": 1540656623247,
+          "message": "The third message"
+        }
+      ]
+    },
+    {
+      "id": 160812021,
+      "code": "16-08-12-021",
+      "lngLat": { "lng": 7.67706, "lat": 5.59241 },
+      "status": "safe",
+      "pollingUnitName": "Amaeke Umuehihie Village Square",
+      "ward": "Uzoagba",
+      "LGA": "Ikeduru",
+      "state": "Imo",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "Process went great!"
+        }
+      ]
+    },
+    {
+      "id": 190103013,
+      "code": "19-01-03-013",
+      "lngLat": { "lng": 8.967950, "lat": 11.991020 },
+      "status": "rigging",
+      "pollingUnitName": "yankintaj / banago, yankintaps",
+      "ward": "Chula",
+      "LGA": "Ajingi",
+      "state": "Kano",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "This is my message"
+        }
+      ]
+    },
+    {
+      "id": 221206005,
+      "code": "22-12-06-005",
+      "lngLat": { "lng": 6.762100, "lat": 8.014110 },
+      "status": "safe",
+      "pollingUnitName": "ebwa area open space, ebwa",
+      "ward": "Kupa North East",
+      "LGA": "Lokoja",
+      "state": "Kogi",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "Don't listen to the media, it's safe to come and vote!"
+        }
+      ]
+    },
+    {
+      "id": 290704001,
+      "code": "29-07-04-001",
+      "lngLat": { "lng": 4.503294, "lat": 7.744077 },
+      "status": "violence",
+      "pollingUnitName": "59 alakas compound",
+      "ward": "Olusokun",
+      "LGA": "Ede North",
+      "state": "Osun",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "Some robbers came to beat up the INEC officials"
+        }
+
+      ]
+    },
+    {
+      "id": 332308005,
+      "code": "33-23-08-005",
+      "lngLat": { "lng": 5.012230, "lat":12.721900  },
+      "status": "violence",
+      "pollingUnitName": "Alkaije",
+      "ward": "Kilgori",
+      "LGA": "Yabo",
+      "state": "Sokoto",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "There was someone killed by the police"
+        }
+
+      ]
+    },
+    {
+      "id": 340508001,
+      "code": "34-05-08-001",
+      "lngLat": { "lng": 10.38067, "lat": 8.52615 },
+      "status": "other",
+      "pollingUnitName": "Bakinkasuwa, Doma, Yobabba",
+      "ward": "Sendirde",
+      "LGA": "Gassol",
+      "state": "Taraba",
+      "reports": [
+        {
+          "status": "other",
+          "date": 1540656623247,
+          "message": "I don dey see awon pikin dey vote o"
+        }
+      ]
+    },
+    {
+      "id": 80605012,
+      "code": "08-06-05-012",
+      "lngLat": { "lng": 12.84791, "lat": 10.86921 },
+      "status": "couldn't vote",
+      "pollingUnitName": "Bula",
+      "ward": "Kautikari",
+      "LGA": "Chibok",
+      "state": "Borno",
+      "reports": [
+        {
+          "status": "couldn't vote",
+          "date": 1540656623247,
+          "message": "Someone ran away with the ballot box!"
+        }
+
+      ]
+    },
+    {
+      "id": 130401003,
+      "code": "13-04-01-003",
+      "lngLat": { "lng": 5.42014, "lat": 8.13828 },
+      "status": "other",
+      "pollingUnitName": "Market centre, Eruku",
+      "ward": "Eruku",
+      "LGA": "Ekiti",
+      "state": "Kwara",
+      "reports": [
+        {
+          "status": "other",
+          "date": 1540656623247,
+          "message": "One guy voted twice"
+        }
+
+      ]
+    },
+    {
+      "id": 121208026,
+      "code": "12-12-08-026",
+      "lngLat": { "lng": 5.61806, "lat": 6.34228 },
+      "status": "couldn't vote",
+      "pollingUnitName": "Ikpoba I, Edo College I",
+      "ward": "Oredi",
+      "LGA": "Oredo",
+      "state": "Edo",
+      "reports": [
+        {
+          "status": "couldn't vote",
+          "date": 1540656623247,
+          "message": "Card reader isn't working"
+        },
+        {
+          "status": "couldn't vote",
+          "date": 1540656623247,
+          "message": "TEST TEST TEST"
+        }
+      ]
+    }
+  ]
+}
