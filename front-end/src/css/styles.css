@@ -1025,29 +1025,36 @@ ul {
 .reports-list {
   display: flex;
   flex-direction: column-reverse; }
-  /* line 137, src/sass/styles.scss */
-  .reports-list button {
-    background: white;
-    appearance: none;
-    float: right;
-    outline: 0;
-    color: #008753;
-    border: 1px solid #008753;
-    border-radius: 4px;
-    transition: background-color .25s;
-    cursor: pointer;
-    margin-top: 4px;
-    margin-bottom: 4px; }
-    /* line 150, src/sass/styles.scss */
-    .reports-list button:hover {
-      background-color: #d9ede5; }
+
+/* line 138, src/sass/styles.scss */
+button {
+  background: white;
+  appearance: none;
+  float: right;
+  outline: 0;
+  color: #008753;
+  border: 1px solid #008753;
+  border-radius: 4px;
+  transition: background-color .25s;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px; }
+  /* line 151, src/sass/styles.scss */
+  button:hover {
+    background-color: #d9ede5; }
 
 /* line 156, src/sass/styles.scss */
+.pdf {
+  font-size: 2rem;
+  float: none;
+  margin-top: 1rem; }
+
+/* line 162, src/sass/styles.scss */
 .seperator {
   margin-left: .6rem;
   margin-right: .6rem;
   color: #aaa; }
 
-/* line 162, src/sass/styles.scss */
+/* line 168, src/sass/styles.scss */
 .message {
   font-weight: bold; }

@@ -133,24 +133,30 @@ ul {
 .reports-list {
   display: flex;
   flex-direction: column-reverse; 
+}
 
-  button {
-    background: white;
-    appearance: none;
-    float: right;
-    outline: 0;
-    color: $nigeria-green;
-    border: 1px solid $nigeria-green;
-    border-radius: 4px;
-    transition: background-color .25s;
-    cursor: pointer;
-    margin-top: 4px;
-    margin-bottom: 4px;
+button {
+  background: white;
+  appearance: none;
+  float: right;
+  outline: 0;
+  color: $nigeria-green;
+  border: 1px solid $nigeria-green;
+  border-radius: 4px;
+  transition: background-color .25s;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 4px;
 
-    &:hover {
-      background-color: mix($nigeria-green, white, 15%);
-    }
+  &:hover {
+    background-color: mix($nigeria-green, white, 15%);
   }
+}
+
+.pdf {
+  font-size: 2rem;
+  float: none;
+  margin-top: 1rem;
 }
 
 .seperator {
