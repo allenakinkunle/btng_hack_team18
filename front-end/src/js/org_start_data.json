@@ -51,6 +51,23 @@
         }
       ]
     },
+    "22-12-06-005": {
+      "id": 221206005,
+      "code": "22-12-06-005",
+      "lngLat": { "lng": 6.762100, "lat": 8.014110 },
+      "status": "safe",
+      "pollingUnitName": "ebwa area open space, ebwa",
+      "ward": "Kupa North East",
+      "LGA": "Lokoja",
+      "state": "Kogi",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 5473835782310,
+          "message": "Don't listen to the media, it's safe to come and vote!"
+        }
+      ]
+    },
     "29-07-04-001": {
       "id": 290704001,
       "code": "29-07-04-001",
@@ -67,6 +84,41 @@
           "message": "Some robbers came to beat up the INEC officials"
         }
 
+      ]
+    },
+    "33-23-08-005": {
+      "id": 332308005,
+      "code": "33-23-08-005",
+      "lngLat": { "lng": 5.012230, "lat":12.721900  },
+      "status": "violence",
+      "pollingUnitName": "Alkaije",
+      "ward": "Kilgori",
+      "LGA": "Yabo",
+      "state": "Sokoto",
+      "reports": [
+        {
+          "status": "violence",
+          "date": 1540656623247,
+          "message": "There was someone killed by the police"
+        }
+
+      ]
+    },
+    "34-05-08-001": {
+      "id": 340508001,
+      "code": "34-05-08-001",
+      "lngLat": { "lng": 10.38067, "lat": 8.52615 },
+      "status": "other",
+      "pollingUnitName": "Bakinkasuwa, Doma, Yobabba",
+      "ward": "Sendirde",
+      "LGA": "Gassol",
+      "state": "Taraba",
+      "reports": [
+        {
+          "status": "other",
+          "date": 4734129624925,
+          "message": "I don dey see awon pikin dey vote o"
+        }
       ]
     },
     "08-06-05-012": {

@@ -12,9 +12,11 @@ var ref = firebase.database().ref('/pollingUnits');
 let examplePollingUnits;
 
 ref.on('value', (snap) => {
-  // console.log(snap.val());
+  let latestDate;
 
   examplePollingUnits = snap.val();
+
+    document.querySelector('.reports-list').innerHTML = '';
 
     for (const key of Object.keys(examplePollingUnits)) {
       let pU = examplePollingUnits[key];
@@ -22,6 +24,7 @@ ref.on('value', (snap) => {
       addUnit(pU);
 
       for (const key of Object.keys(pU.reports)) {
+
         let r = pU.reports[key];
 
         let li = document.createElement('li');
@@ -32,7 +35,7 @@ ref.on('value', (snap) => {
               <span class="message">${r.message}</span>
               <button>Flag as suspicious</button>`
 
-        document.querySelector('.reports-list').appendChild(li);
+        document.querySelector('.reports-list').prepend(li);
       }
     }
 
@@ -79,13 +82,23 @@ let getPopupHtml = (unit) => {
     <h4>Reports:</h4>
     <ul>`
 
-  unit.reports.forEach((r) => {
-    html += `<li>
+  for (const key of Object.keys(unit.reports)) {
+      let r = unit.reports[key];
+
+      html += `<li>
       <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
       <span class="time">${dateToTime(r.date)}</span>
       <span class="message">"${r.message}"</span>
     </li>`;
-  });
+  }
+
+  // unit.reports.forEach((r) => {
+  //   html += `<li>
+  //     <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
+  //     <span class="time">${dateToTime(r.date)}</span>
+  //     <span class="message">"${r.message}"</span>
+  //   </li>`;
+  // });
 
   html += `</ul></div>`;
 
