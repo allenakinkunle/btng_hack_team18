@@ -998,20 +998,21 @@ ul {
 
 /* line 105, src/sass/styles.scss */
 .all-reports {
+  font-size: .8rem;
   padding-left: 2vw;
   width: 40vw;
   height: 94vh;
   overflow-y: scroll; }
-  /* line 111, src/sass/styles.scss */
+  /* line 112, src/sass/styles.scss */
   .all-reports h2 {
     margin-top: 0;
     color: #008753; }
-  /* line 116, src/sass/styles.scss */
+  /* line 117, src/sass/styles.scss */
   .all-reports li {
     border-top: 1px dashed #bbb;
     padding-top: .7rem;
     padding-bottom: .7rem; }
-  /* line 122, src/sass/styles.scss */
+  /* line 123, src/sass/styles.scss */
   .all-reports h3 {
     display: inline-block;
     margin-top: 0;
@@ -1020,11 +1021,11 @@ ul {
     cursor: pointer;
     border-bottom: 2px solid #008753; }
 
-/* line 132, src/sass/styles.scss */
+/* line 133, src/sass/styles.scss */
 .reports-list {
   display: flex;
   flex-direction: column-reverse; }
-  /* line 136, src/sass/styles.scss */
+  /* line 137, src/sass/styles.scss */
   .reports-list button {
     background: white;
     appearance: none;
@@ -1037,16 +1038,16 @@ ul {
     cursor: pointer;
     margin-top: 4px;
     margin-bottom: 4px; }
-    /* line 149, src/sass/styles.scss */
+    /* line 150, src/sass/styles.scss */
     .reports-list button:hover {
       background-color: #d9ede5; }
 
-/* line 155, src/sass/styles.scss */
+/* line 156, src/sass/styles.scss */
 .seperator {
   margin-left: .6rem;
   margin-right: .6rem;
   color: #aaa; }
 
-/* line 161, src/sass/styles.scss */
+/* line 162, src/sass/styles.scss */
 .message {
   font-weight: bold; }
