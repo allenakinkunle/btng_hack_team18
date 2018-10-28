@@ -21,7 +21,9 @@ ref.on('value', (snap) => {
 
       addUnit(pU);
 
-      pU.reports.forEach((r) => {
+      for (const key of Object.keys(pU.reports)) {
+        let r = pU.reports[key];
+
         let li = document.createElement('li');
             li.innerHTML = `<h3 class="unit-name">${pU.pollingUnitName}</h3></br>
               <span class="indicator" style="background-color: ${getStatusColor(r.status)};"></span>
@@ -31,7 +33,7 @@ ref.on('value', (snap) => {
               <button>Flag as suspicious</button>`
 
         document.querySelector('.reports-list').appendChild(li);
-      });
+      }
     }
 
   document.querySelectorAll('.reports-list .unit-name').forEach((n) => {
